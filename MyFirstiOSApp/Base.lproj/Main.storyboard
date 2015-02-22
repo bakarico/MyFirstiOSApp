@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="MyFirstiOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Hello World!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMv-dX-sEf">
+                                <rect key="frame" x="254" y="154" width="93" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="This is the first iOS App of Yawaza Rico" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqL-MB-Mu8">
+                                <rect key="frame" x="177" y="213" width="246" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RRS-4U-Imc">
+                                <rect key="frame" x="255" y="319" width="91" height="30"/>
+                                <state key="normal" title="Just click me">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="iqL-MB-Mu8" secondAttribute="centerX" id="IbA-PK-QBE"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="RRS-4U-Imc" secondAttribute="bottom" constant="150" id="KaF-sN-0u8"/>
+                            <constraint firstItem="TMv-dX-sEf" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="150" id="gfx-uY-0Sp"/>
+                            <constraint firstAttribute="centerX" secondItem="iqL-MB-Mu8" secondAttribute="centerX" id="jC8-N8-2k0"/>
+                            <constraint firstAttribute="centerX" secondItem="TMv-dX-sEf" secondAttribute="centerX" id="mIW-Eu-4Kh"/>
+                            <constraint firstItem="iqL-MB-Mu8" firstAttribute="top" secondItem="TMv-dX-sEf" secondAttribute="bottom" constant="50" id="psw-Di-Ebg"/>
+                            <constraint firstAttribute="centerX" secondItem="RRS-4U-Imc" secondAttribute="centerX" id="skS-Yr-RT4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="gfx-uY-0Sp"/>
+                                <exclude reference="mIW-Eu-4Kh"/>
+                                <exclude reference="IbA-PK-QBE"/>
+                                <exclude reference="jC8-N8-2k0"/>
+                                <exclude reference="psw-Di-Ebg"/>
+                                <exclude reference="skS-Yr-RT4"/>
+                                <exclude reference="KaF-sN-0u8"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="gfx-uY-0Sp"/>
+                                <include reference="mIW-Eu-4Kh"/>
+                                <include reference="IbA-PK-QBE"/>
+                                <include reference="jC8-N8-2k0"/>
+                                <include reference="psw-Di-Ebg"/>
+                                <include reference="skS-Yr-RT4"/>
+                                <include reference="KaF-sN-0u8"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="clickMeButton" destination="RRS-4U-Imc" id="C7Q-MA-HI9"/>
+                        <outlet property="helloWorldLabel" destination="TMv-dX-sEf" id="8Qy-lw-ODH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
