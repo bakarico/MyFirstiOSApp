@@ -24,6 +24,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func clickMeButtonTapped(sender: UIButton) {
+        self.helloWorldLabel.text = "I am not hungry."
+    }
 
 }
 
