@@ -16,6 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ljm-kK-J4o" userLabel="BackgroupImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                </variation>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Hello World!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TMv-dX-sEf">
                                 <rect key="frame" x="254" y="154" width="93" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -49,6 +55,9 @@
                             <constraint firstAttribute="centerX" secondItem="RRS-4U-Imc" secondAttribute="centerX" id="skS-Yr-RT4"/>
                         </constraints>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ljm-kK-J4o"/>
+                            </mask>
                             <mask key="constraints">
                                 <exclude reference="IbA-PK-QBE"/>
                                 <exclude reference="jC8-N8-2k0"/>
@@ -60,6 +69,9 @@
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ljm-kK-J4o"/>
+                            </mask>
                             <mask key="constraints">
                                 <include reference="IbA-PK-QBE"/>
                                 <include reference="jC8-N8-2k0"/>
@@ -72,7 +84,9 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="backgroupImageView" destination="ljm-kK-J4o" id="G7E-yQ-wqd"/>
                         <outlet property="clickMeButton" destination="RRS-4U-Imc" id="C7Q-MA-HI9"/>
+                        <outlet property="copyrightLable" destination="iqL-MB-Mu8" id="Bam-Xn-gSs"/>
                         <outlet property="helloWorldLabel" destination="TMv-dX-sEf" id="8Qy-lw-ODH"/>
                     </connections>
                 </viewController>
