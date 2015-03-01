@@ -12,8 +12,10 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var helloWorldLabel: UILabel!
     @IBOutlet weak var clickMeButton: UIButton!
-    @IBOutlet weak var backgroupImageView: UIImageView!
+    @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var copyrightLable: UILabel!
+    
+    var backgroundImageFlag = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,10 +33,17 @@ class ViewController: UIViewController {
         self.helloWorldLabel.backgroundColor = UIColor(white: 1, alpha: 0.8)
         self.copyrightLable.backgroundColor = UIColor(white: 1, alpha: 0.8)
        
-        var randomNumberString = String(format: "girl%i", arc4random_uniform(2) + 1)
+        // var randomNumberString = String(format: "girl%i", arc4random_uniform(2) + 1)
         // var randomNumberString:String = String(format: "girl%i", arc4random_uniform(2) + 1)
         
-        self.backgroupImageView.image = UIImage(named: randomNumberString)
+        if !self.backgroundImageFlag {
+            self.backgroundImageView.image = UIImage(named: "girl1")
+            self.backgroundImageFlag = true
+        } else {
+            self.backgroundImageView.image = UIImage(named: "girl2")
+            self.backgroundImageFlag = false
+        }
+
         
     }
 

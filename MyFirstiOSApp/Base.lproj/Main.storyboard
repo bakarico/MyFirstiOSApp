@@ -84,7 +84,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="backgroupImageView" destination="ljm-kK-J4o" id="G7E-yQ-wqd"/>
+                        <outlet property="backgroundImageView" destination="ljm-kK-J4o" id="a1I-8T-tjO"/>
                         <outlet property="clickMeButton" destination="RRS-4U-Imc" id="C7Q-MA-HI9"/>
                         <outlet property="copyrightLable" destination="iqL-MB-Mu8" id="Bam-Xn-gSs"/>
                         <outlet property="helloWorldLabel" destination="TMv-dX-sEf" id="8Qy-lw-ODH"/>
