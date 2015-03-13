@@ -41,15 +41,17 @@ class ViewController: UIViewController {
                 if error != nil {
                     println(error)
                 } else {
-                    var alert = UIAlertView()
+                    let alert = UIAlertView()
                     
                     var error: NSError?
-                    var regex = NSRegularExpression(pattern: ".*<small>(.*?)</small>.*", options: .DotMatchesLineSeparators, error: &error)
+                    let regex = NSRegularExpression(pattern: ".*<small>(.*?)</small>.*",
+                        options: .DotMatchesLineSeparators, error: &error)
                     
                     let response = NSString(string: data!)
                     let range = NSRange(location: 0, length: response.length)
                     let result = regex?.stringByReplacingMatchesInString(response, options: nil,
-                                                                          range: range, withTemplate: "$1")
+                        range: range, withTemplate: "$1")
+    
                     if result != nil {
                         alert.message = String(result!)
                     } else {
@@ -63,7 +65,6 @@ class ViewController: UIViewController {
                 }
             }
 
-        //self.helloWorldLabel.text = "I am not hungry."
         self.helloWorldLabel.backgroundColor = UIColor(white: 1, alpha: 0.8)
         self.copyrightLable.backgroundColor = UIColor(white: 1, alpha: 0.8)
         
