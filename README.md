@@ -1,2 +1,2 @@
 # MyFirstiOSApp
-The track of learn iOS app development
+The track of learning iOS app development
